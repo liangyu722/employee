@@ -6,5 +6,5 @@ import retrofit2.http.GET
 interface EmployeeService {
 
     @GET("employees.json")
-    suspend fun employeesAsync(): EmployeeResponse
+    suspend fun getEmployeesAsync(): EmployeeResponse
 }
