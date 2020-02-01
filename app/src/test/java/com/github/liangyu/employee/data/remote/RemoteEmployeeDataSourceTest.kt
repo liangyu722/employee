@@ -45,7 +45,7 @@ class RemoteEmployeeDataSourceTest {
         val result = sut.getEmployees()
         //Assert
         result shouldBeInstanceOf Success::class
-        (result as Success).data shouldEqual employeeResponse
+        (result as Success).data shouldEqual employeeList
     }
 
     @Test
