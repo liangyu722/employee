@@ -48,9 +48,9 @@ class EmployeeMemoryCacheTest {
     }
 
     //--------------------------Helper----------------------------
-    val employeeEntity = EmployeeEntity("biography", "email", "employeeType", "name", "", "", "", "", "")
-    val employeeList = listOf(employeeEntity)
+    private val employeeEntity = EmployeeEntity("biography", "email", "employeeType", "name", "", "", "", "", "")
+    private val employeeList = listOf(employeeEntity)
 
-    val newEmployeeEntity = EmployeeEntity("new biography", "email", "employeeType", "name", "", "", "", "", "")
-    val newEmployeeList = listOf(newEmployeeEntity)
+    private val newEmployeeEntity = EmployeeEntity("new biography", "email", "employeeType", "name", "", "", "", "", "")
+    private val newEmployeeList = listOf(newEmployeeEntity)
 }

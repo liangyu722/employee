@@ -1,7 +1,8 @@
-package com.github.liangyu.employee.data.remote.network
+package com.github.liangyu.employee.data.remote
 
 import com.github.liangyu.employee.common.Result
 import com.github.liangyu.employee.data.EmployeeDataSource
+import com.github.liangyu.employee.data.remote.network.EmployeeService
 import com.github.liangyu.employee.data.remote.network.response.EmployeeEntity
 
 class RemoteEmployeeDataSource(
