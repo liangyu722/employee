@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="employee"
+            type="com.github.liangyu.employee.model.Employee" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:layout_margin="@dimen/list_item_margin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/list_item_padding"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/list_item_padding">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/employee_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/textview_margin"
+                android:text="@string/employee_name"
+                app:layout_constraintBottom_toTopOf="@+id/employee_email"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Employee Name" />
+
+            <TextView
+                android:id="@+id/employee_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/textview_margin"
+                android:text="@{earthquake.datetime}"
+                app:layout_constraintBottom_toBottomOf="@+id/employee_name"
+                app:layout_constraintStart_toEndOf="@+id/employee_name"
+                app:layout_constraintTop_toTopOf="@+id/employee_name"
+                tools:text="John Smith" />
+
+            <TextView
+                android:id="@+id/employee_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/employee_email"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/employee_name"
+                app:layout_constraintTop_toBottomOf="@+id/employee_name"
+                tools:text="Employee Email" />
+
+            <TextView
+                android:id="@+id/employee_email_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/textview_margin"
+                android:text="@{Double.toString(earthquake.magnitude)}"
+                app:layout_constraintBottom_toBottomOf="@+id/employee_email"
+                app:layout_constraintStart_toEndOf="@+id/employee_email"
+                app:layout_constraintTop_toTopOf="@+id/employee_email"
+                tools:text="JohnSmith@gmail.com" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

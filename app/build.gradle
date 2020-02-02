@@ -55,6 +55,9 @@ dependencies {
     //Recycler View
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
 
+    //Card
+    implementation "androidx.cardview:cardview:$cardVersion"
+
     //Test
     testImplementation "io.mockk:mockk:$mockkVersion"
     testImplementation "junit:junit:$junitVersion"
