@@ -9,7 +9,7 @@ import com.github.liangyu.employee.domain.ViewEmployees
 import com.github.liangyu.employee.model.Employee
 import kotlinx.coroutines.launch
 
-class EmployeeViewModel(
+class EmployeesViewModel(
     private val useCase: ViewEmployees
 ) : ViewModel(), ViewEmployeesViewModel {
 

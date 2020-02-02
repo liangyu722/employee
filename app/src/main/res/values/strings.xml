@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Employee</string>
     <string name="employees_error">Unable to retrieve employees</string>
+    <string name="there_is_no_employees">There is no employees</string>
 </resources>

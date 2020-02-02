@@ -38,7 +38,7 @@ class EmployeeViewModelTest {
         //Arrange
         mainCoroutineRule.pauseDispatcher()
         //Act
-        sut = EmployeeViewModel(useCase)
+        sut = EmployeesViewModel(useCase)
         //Assert
         sut.loading.value shouldEqual true
         mainCoroutineRule.resumeDispatcher()
@@ -48,7 +48,7 @@ class EmployeeViewModelTest {
     fun `loading indicator is false when finished loading`() {
         //Arrange
         //Act
-        sut = EmployeeViewModel(useCase)
+        sut = EmployeesViewModel(useCase)
         //Assert
         sut.loading.value shouldEqual false
     }
@@ -58,7 +58,7 @@ class EmployeeViewModelTest {
         //Arrange
         coEvery { useCase.getEmployees() } returns exceptionResponse
         //Act
-        sut = EmployeeViewModel(useCase)
+        sut = EmployeesViewModel(useCase)
         //Assert
         sut.loading.value shouldEqual false
         sut.errorMessage.value!!.peekContent() shouldEqual R.string.employees_error
@@ -68,7 +68,7 @@ class EmployeeViewModelTest {
     fun `employees is set if use case respond with empty response`() {
         //Arrange
         //Act
-        sut = EmployeeViewModel(useCase)
+        sut = EmployeesViewModel(useCase)
         //Assert
         sut.empty.value shouldEqual true
         sut.employees.value shouldEqual emptyResponse.data
@@ -79,7 +79,7 @@ class EmployeeViewModelTest {
         //Arrange
         coEvery { useCase.getEmployees() } returns employeeListResponse
         //Act
-        sut = EmployeeViewModel(useCase)
+        sut = EmployeesViewModel(useCase)
         //Assert
         sut.empty.value shouldEqual false
         sut.employees.value shouldEqual employeeListResponse.data
