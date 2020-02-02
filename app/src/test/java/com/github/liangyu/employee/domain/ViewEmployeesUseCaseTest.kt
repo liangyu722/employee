@@ -64,11 +64,11 @@ class ViewEmployeesUseCaseTest {
     private val employeeListRepositoryResponse = Success(employeeList)
     private val employee = Employee(
         employeeEntity.uuid,
-        employeeEntity.biography,
         employeeEntity.fullName,
         employeeEntity.phoneNumber,
-        employeeEntity.photoUrlLarge,
-        employeeEntity.photoUrlSmall
+        employeeEntity.emailAddress,
+        employeeEntity.photoUrlSmall,
+        employeeEntity.team
     )
     private val employeeListResponse = Success(listOf(employee))
     private val exceptionResponse = Error(Exception("fake exception"))

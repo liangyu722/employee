@@ -25,11 +25,11 @@ class ViewEmployeesUseCase(
     private fun EmployeeEntity.toEmployee(): Employee {
         return Employee(
             this.uuid,
-            this.biography,
             this.fullName,
             this.phoneNumber,
-            this.photoUrlLarge,
-            this.photoUrlSmall
+            this.emailAddress,
+            this.photoUrlSmall,
+            this.team
         )
     }
 }
