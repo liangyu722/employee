@@ -9,5 +9,6 @@ interface ViewEmployeesViewModel {
     val loading: LiveData<Boolean>
     val errorMessage: LiveData<Event<Int>>
     val employees: LiveData<List<Employee>>
+    val empty: LiveData<Boolean>
 
 }

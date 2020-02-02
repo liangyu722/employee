@@ -1,8 +1,6 @@
 package com.github.liangyu.employee.ui.employee
 
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.github.liangyu.employee.R
 import com.github.liangyu.employee.common.Event
 import com.github.liangyu.employee.common.Result.Error
@@ -18,6 +16,9 @@ class EmployeeViewModel(
     override val loading = MutableLiveData<Boolean>()
     override val errorMessage = MutableLiveData<Event<Int>>()
     override val employees = MutableLiveData<List<Employee>>()
+    override val empty: LiveData<Boolean> = Transformations.map(employees) {
+        it.isEmpty()
+    }
 
     init {
         load()

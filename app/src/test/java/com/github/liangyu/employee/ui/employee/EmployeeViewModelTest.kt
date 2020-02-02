@@ -70,6 +70,7 @@ class EmployeeViewModelTest {
         //Act
         sut = EmployeeViewModel(useCase)
         //Assert
+        sut.empty.value shouldEqual true
         sut.employees.value shouldEqual emptyResponse.data
     }
 
@@ -80,6 +81,7 @@ class EmployeeViewModelTest {
         //Act
         sut = EmployeeViewModel(useCase)
         //Assert
+        sut.empty.value shouldEqual false
         sut.employees.value shouldEqual employeeListResponse.data
     }
 
