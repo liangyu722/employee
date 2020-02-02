@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Employee</string>
+    <string name="employees_error">Unable to retrieve employees</string>
 </resources>
