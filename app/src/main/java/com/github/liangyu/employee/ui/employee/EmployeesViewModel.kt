@@ -16,7 +16,7 @@ class EmployeesViewModel @Inject constructor(
 
     override val loading = MutableLiveData<Boolean>()
     override val errorMessage = MutableLiveData<Event<Int>>()
-    override val employees = MutableLiveData<List<Employee>>()
+    override val employees = MutableLiveData<List<Employee>>().apply { value = emptyList() }
     override val empty: LiveData<Boolean> = Transformations.map(employees) {
         it.isEmpty()
     }

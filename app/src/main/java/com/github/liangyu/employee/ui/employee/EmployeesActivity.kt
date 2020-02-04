@@ -14,6 +14,7 @@ class EmployeesActivity : DaggerAppCompatActivity() {
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
     private lateinit var viewModel: ViewEmployeesViewModel
+    private lateinit var listAdapter: EmployeesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,5 +29,7 @@ class EmployeesActivity : DaggerAppCompatActivity() {
         binding.lifecycleOwner = this
         binding.viewmodel = viewModel
         binding.root.setupToast(this, viewModel.errorMessage)
+        listAdapter = EmployeesAdapter()
+        binding.employeeList.adapter = listAdapter
     }
 }
