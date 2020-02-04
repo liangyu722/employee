@@ -8,8 +8,9 @@ import com.github.liangyu.employee.common.Result.Success
 import com.github.liangyu.employee.domain.ViewEmployees
 import com.github.liangyu.employee.model.Employee
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class EmployeesViewModel(
+class EmployeesViewModel @Inject constructor(
     private val useCase: ViewEmployees
 ) : ViewModel(), ViewEmployeesViewModel {
 

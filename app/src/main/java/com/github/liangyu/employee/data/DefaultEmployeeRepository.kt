@@ -7,8 +7,9 @@ import com.github.liangyu.employee.data.cache.EmployeeCache
 import com.github.liangyu.employee.data.remote.network.response.EmployeeEntity
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class DefaultEmployeeRepository(
+class DefaultEmployeeRepository @Inject constructor(
     private val remoteEmployeeDataSource: EmployeeDataSource,
     private val employeeCache: EmployeeCache,
     private val backgroundDispatcher: CoroutineDispatcher

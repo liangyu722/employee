@@ -4,8 +4,9 @@ import com.github.liangyu.employee.common.Result
 import com.github.liangyu.employee.data.EmployeeDataSource
 import com.github.liangyu.employee.data.remote.network.EmployeeService
 import com.github.liangyu.employee.data.remote.network.response.EmployeeEntity
+import javax.inject.Inject
 
-class RemoteEmployeeDataSource(
+class RemoteEmployeeDataSource @Inject constructor(
     private val employeeService: EmployeeService
 ) : EmployeeDataSource {
 

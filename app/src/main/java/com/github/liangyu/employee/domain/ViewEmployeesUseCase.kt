@@ -6,8 +6,9 @@ import com.github.liangyu.employee.common.Result.Success
 import com.github.liangyu.employee.data.EmployeeRepository
 import com.github.liangyu.employee.data.remote.network.response.EmployeeEntity
 import com.github.liangyu.employee.model.Employee
+import javax.inject.Inject
 
-class ViewEmployeesUseCase(
+class ViewEmployeesUseCase @Inject constructor(
     private val repository: EmployeeRepository
 ) : ViewEmployees {
 
