@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
@@ -53,7 +52,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/textview_margin"
-                android:text="@{earthquake.datetime}"
                 app:layout_constraintBottom_toBottomOf="@+id/employee_name"
                 app:layout_constraintStart_toEndOf="@+id/employee_name"
                 app:layout_constraintTop_toTopOf="@+id/employee_name"
@@ -75,7 +73,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/textview_margin"
-                android:text="@{Double.toString(earthquake.magnitude)}"
                 app:layout_constraintBottom_toBottomOf="@+id/employee_email"
                 app:layout_constraintStart_toEndOf="@+id/employee_email"
                 app:layout_constraintTop_toTopOf="@+id/employee_email"
