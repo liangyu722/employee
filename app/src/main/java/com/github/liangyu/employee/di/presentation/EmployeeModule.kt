@@ -13,9 +13,11 @@ import dagger.multibindings.IntoMap
 @Module
 abstract class EmployeeModule {
 
-    @ContributesAndroidInjector(modules = [
-        ViewModelBuilder::class
-    ])
+    @ContributesAndroidInjector(
+        modules = [
+            ViewModelBuilder::class
+        ]
+    )
     abstract fun employeeActivity(): EmployeesActivity
 
     @Binds

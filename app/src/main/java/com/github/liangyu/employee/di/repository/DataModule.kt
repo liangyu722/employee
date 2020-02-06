@@ -30,8 +30,8 @@ class DataModule {
     @Singleton
     @Provides
     fun providesWeatherRepository(
-            employeeDataSource: EmployeeDataSource,
-            employeeCache: EmployeeCache
+        employeeDataSource: EmployeeDataSource,
+        employeeCache: EmployeeCache
     ): EmployeeRepository {
         return DefaultEmployeeRepository(employeeDataSource, employeeCache, Dispatchers.IO)
     }

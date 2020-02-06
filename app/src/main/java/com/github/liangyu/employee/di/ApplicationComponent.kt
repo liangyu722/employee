@@ -14,13 +14,13 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(
-        modules = [
-            AndroidSupportInjectionModule::class,
-            ServiceModule::class,
-            DataModule::class,
-            DomainModule::class,
-            EmployeeModule::class
-        ]
+    modules = [
+        AndroidSupportInjectionModule::class,
+        ServiceModule::class,
+        DataModule::class,
+        DomainModule::class,
+        EmployeeModule::class
+    ]
 )
 interface ApplicationComponent : AndroidInjector<EmployeeApplication> {
     @Component.Factory

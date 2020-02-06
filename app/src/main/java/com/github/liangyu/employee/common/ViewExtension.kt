@@ -7,8 +7,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 
 fun View.setupToast(
-        lifecycleOwner: LifecycleOwner,
-        toastEvent: LiveData<Event<Int>>
+    lifecycleOwner: LifecycleOwner,
+    toastEvent: LiveData<Event<Int>>
 ) {
     toastEvent.observe(lifecycleOwner, Observer { event ->
         event.getContentIfNotHandled()?.let {

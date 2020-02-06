@@ -2,7 +2,8 @@ package com.github.liangyu.employee.data
 
 import com.github.liangyu.employee.common.DataLoadingException
 import com.github.liangyu.employee.common.Result
-import com.github.liangyu.employee.common.Result.*
+import com.github.liangyu.employee.common.Result.Error
+import com.github.liangyu.employee.common.Result.Success
 import com.github.liangyu.employee.data.cache.EmployeeCache
 import com.github.liangyu.employee.data.remote.network.response.EmployeeEntity
 import kotlinx.coroutines.CoroutineDispatcher
@@ -33,4 +34,3 @@ class DefaultEmployeeRepository @Inject constructor(
         }
     }
 }
-

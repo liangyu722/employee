@@ -5,5 +5,5 @@ import com.github.liangyu.employee.data.remote.network.response.EmployeeEntity
 
 interface EmployeeDataSource {
 
-    suspend fun getEmployees() : Result<List<EmployeeEntity>>
+    suspend fun getEmployees(): Result<List<EmployeeEntity>>
 }
