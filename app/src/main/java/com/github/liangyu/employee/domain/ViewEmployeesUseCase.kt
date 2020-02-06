@@ -15,9 +15,10 @@ class ViewEmployeesUseCase @Inject constructor(
     override suspend fun getEmployees(): Result<List<Employee>> {
         return when (val result = repository.getEmployees()) {
             is Success -> {
-                Success(result.data.map { employeeEntity ->
-                    employeeEntity.toEmployee()
-                })
+                val employeeList = result.data
+                    .filter { employeeEntity -> employeeEntity.uuid != null }
+                    .map { employeeEntity -> employeeEntity.toEmployee() }
+                Success(employeeList)
             }
             is Error -> result
         }
@@ -25,12 +26,12 @@ class ViewEmployeesUseCase @Inject constructor(
 
     private fun EmployeeEntity.toEmployee(): Employee {
         return Employee(
-            this.uuid,
-            this.fullName,
-            this.phoneNumber,
-            this.emailAddress,
-            this.photoUrlSmall,
-            this.team
+            this.uuid ?: "",
+            this.fullName ?: "",
+            this.phoneNumber ?: "",
+            this.emailAddress ?: "",
+            this.photoUrlSmall ?: "",
+            this.team ?: ""
         )
     }
 }
